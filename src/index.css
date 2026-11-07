@@ -2,12 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial;
 }
 
 body {
   padding:40px;
   background-color: #fbfaf8;
-  font-family: "Franklin Gothic Medium", Arial;
   font-size: 20px;
   word-wrap: break-word;
 }
@@ -28,9 +28,9 @@ h2{
   min-width: 350px;
   width:90%;
   padding: 50px;
-  border-radius: 25px;
-  background-color: #1dbc7e;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  background-color: #ecc4fe;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 
   transition: transform 0.2s;
   text-align: center;
@@ -39,7 +39,7 @@ h2{
 }
 
 label{
-  color: black;
+  color: #3a0054;
   font-weight: bold;
 }
 
@@ -52,7 +52,7 @@ input, label{
 input{
   box-sizing: 1px solid #ddd;
   border-radius: 8px;
-  border:1px solid black;
+  border:1px solid #3a0054;
 }
 
 input[type="radio"]{
@@ -64,32 +64,63 @@ input[type="radio"]:hover{
   cursor: pointer;
 }
 
+input[type="radio"]:checked{
+  accent-color: #ecc4fe;
+}
+
+input[type="radio"]:checked:hover{
+  accent-color: #ecc4fe;
+}
+
+
+
+.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.radio-option input[type="radio"] {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.radio-option label {
+  margin: 0;
+  cursor: pointer;
+}
+
 button{
   border: none;
   border-radius: 8px;
   padding: 10px 30px;
   font-size: 15px;
   color: #fbfaf8;
-  background-color: black;
+  background-color: #3a0054;
   margin: 5px;
 }
 
 button:hover{
-  /*text-decoration: underline;*/
   transform: scale(1.05);
   cursor: pointer;
 }
 
 form > div{
-  background-color:white;
+  background-color:rgb(255, 255, 248);
   border-radius: 15px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   padding: 20px;
   margin: 15px auto;
-
-  /*position:relative;
-  display: flex;
-  flex-wrap: wrap;*/
 }
 
 input[type="radio"]{
@@ -107,7 +138,7 @@ input[type="radio"]{
 
 .results h3{
   font-size: 40px;
-  color: #1dbc7e;
+  color: #a757cc;
 }
 
 .results p{
@@ -115,5 +146,5 @@ input[type="radio"]{
 }
 
 .results .num{
-  color: #1dbc7e;
+  color: #a757cc;
 }

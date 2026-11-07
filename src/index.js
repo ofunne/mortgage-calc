@@ -87,23 +87,31 @@ const App = () => {
       <form>
 
         <div id="participants">
-          <label htmlFor="participants">How many people will be applying for the mortgage? *</label><br/>
-          <input 
-            type="radio" 
-            name="participants"
-            value="one"
-            checked={formData.participants === "one"}
-            onChange={handleChange}
-          /> 
-          Just me
-          <input 
-            type="radio" 
-            name="participants"
-            value="two"
-            checked={formData.participants === "two"}
-            onChange={handleChange}
-          />
-          Me and someone else
+          <label>How many people will be applying for the mortgage? *</label>
+
+          <div className="radio-options">
+            <div className="radio-option">
+              <input
+                type="radio"
+                name="participants"
+                value="one"
+                checked={formData.participants === "one"}
+                onChange={handleChange}
+              />
+              <label>Just me</label>
+            </div>
+
+            <div className="radio-option">
+              <input
+                type="radio"
+                name="participants"
+                value="two"
+                checked={formData.participants === "two"}
+                onChange={handleChange}
+              />
+              <label>Me and someone else</label>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -152,38 +160,41 @@ const App = () => {
 
         {/* First applicant */}
         <div id="employment">
-          <label htmlFor="employment">What is your employment status? *</label>
-          <br/>
-          <input
-            type="radio"
-            name="employment"
-            value="employed"
-            checked={formData.employment === "employed"}
-            onChange={handleChange}
-          />
-          Employed
-          <input
-            type="radio"
-            name="employment"
-            value="self"
-            checked={formData.employment === "self"}
-            onChange={handleChange}
-          />
-          Self-employed
-          <input
-            type="radio"
-            name="employment"
-            value="retired"
-            checked={formData.employment === "retired"}
-            onChange={handleChange}
-          /> Retired
-          <input
-            type="radio"
-            name="employment"
-            value="unemployed"
-            checked={formData.employment === "unemployed"}
-            onChange={handleChange}
-          /> Unemployed<br/>
+          <label>What is your employment status? *</label>
+
+          <div className="radio-options">
+            <div className="radio-option">
+              <input type="radio" name="employment" value="employed"
+                checked={formData.employment === "employed"}
+                onChange={handleChange}
+              />
+              <label>Employed</label>
+            </div>
+
+            <div className="radio-option">
+              <input type="radio" name="employment" value="self"
+                checked={formData.employment === "self"}
+                onChange={handleChange}
+              />
+              <label>Self-employed</label>
+            </div>
+
+            <div className="radio-option">
+              <input type="radio" name="employment" value="retired"
+                checked={formData.employment === "retired"}
+                onChange={handleChange}
+              />
+              <label>Retired</label>
+            </div>
+
+            <div className="radio-option">
+              <input type="radio" name="employment" value="unemployed"
+                checked={formData.employment === "unemployed"}
+                onChange={handleChange}
+              />
+              <label>Unemployed</label>
+            </div>
+          </div>
         </div>
 
         {formData.employment === "employed" && (
@@ -288,38 +299,41 @@ const App = () => {
         {formData.participants === "two" && (
           <>
             <div id="employment2">
-              <label htmlFor="employment2">What is the employment status of the second applicant? *</label>
-              <br/>
-              <input
-                type="radio"
-                name="employment2"
-                value="employed"
-                checked={formData.employment2 === "employed"}
-                onChange={handleChange}
-              />
-              Employed
-              <input
-                type="radio"
-                name="employment2"
-                value="self"
-                checked={formData.employment2 === "self"}
-                onChange={handleChange}
-              />
-              Self-employed
-              <input
-                type="radio"
-                name="employment2"
-                value="retired"
-                checked={formData.employment2 === "retired"}
-                onChange={handleChange}
-              /> Retired
-              <input
-                type="radio"
-                name="employment2"
-                value="unemployed"
-                checked={formData.employment2 === "unemployed"}
-                onChange={handleChange}
-              /> Unemployed<br/>
+              <label>What is the employment status of the second applicant? *</label>
+
+              <div className="radio-options">
+                <div className="radio-option">
+                  <input type="radio" name="employment2" value="employed"
+                    checked={formData.employment2 === "employed"}
+                    onChange={handleChange}
+                  />
+                  <label>Employed</label>
+                </div>
+
+                <div className="radio-option">
+                  <input type="radio" name="employment2" value="self"
+                    checked={formData.employment2 === "self"}
+                    onChange={handleChange}
+                  />
+                  <label>Self-employed</label>
+                </div>
+
+                <div className="radio-option">
+                  <input type="radio" name="employment2" value="retired"
+                    checked={formData.employment2 === "retired"}
+                    onChange={handleChange}
+                  />
+                  <label>Retired</label>
+                </div>
+
+                <div className="radio-option">
+                  <input type="radio" name="employment2" value="unemployed"
+                    checked={formData.employment2 === "unemployed"}
+                    onChange={handleChange}
+                  />
+                  <label>Unemployed</label>
+                </div>
+              </div>
             </div>
 
             {formData.employment2 === "employed" && (

@@ -41,3 +41,4 @@ Feel free to [pop me an email](mailto:ofunnemordi1@outlook.com) or [visit my Lin
 ### Useful Resources
 
 - [Have a go at creating your own mortgage calculator!](https://www.theforage.com/simulations/lloyds-banking-group/technology-engineering-j763)
+- [Visit my calculator](https://happy-flower-0a3c35510.2.azurestaticapps.net/)
